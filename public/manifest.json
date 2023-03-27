@@ -1,0 +1,17 @@
+{
+  "short_name": "Cryptway",
+  "name": "Cryptway",
+  "description": "Simple & Privacy CRypto Wallet",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "action": {
+      "default_popup": "index.html",
+      "default_title": "Cryptway"
+  },
+  "permissions": [],
+  "icons": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+  }
+}

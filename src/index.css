@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box; 
+    background: #202124;
+}
+  
+
+/* white glassmorphism */
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.eth-card {
+  background-color:#0011ff;
+  background-image: 
+    radial-gradient(at 83% 67%, rgb(15, 20, 167) 0, transparent 58%), 
+    radial-gradient(at 67% 20%, rgba(228, 247, 14, 0.621) 0, transparent 59%), 
+    radial-gradient(at 88% 35%, rgb(20, 255, 247) 0, transparent 50%), 
+    radial-gradient(at 31% 91%, rgb(109, 216, 95) 0, transparent 52%), 
+    radial-gradient(at 27% 71%, rgb(182, 85, 247) 0, transparent 49%), 
+    radial-gradient(at 74% 89%, rgb(244, 253, 78) 0, transparent 51%), 
+    radial-gradient(at 53% 75%, hsla(174,94%,68%,1) 0, transparent 45%);
+}
+
+.text-gradient {
+  background-color: #fff;
+  background-image: radial-gradient(at 4% 36%, hsla(0,0%,100%,1) 0, transparent 53%), radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient_btn {
+  background: linear-gradient(
+    103.91deg,
+    #9b51e0 21.01%,
+    rgba(48, 129, 237, 0.8) 100%
+  );
+}
+ 
+
+.gradient-border {
+  background: linear-gradient(
+    168.82deg,
+    #fb37ff 1.7%,
+    rgba(155, 111, 238, 0) 27.12%,
+    rgba(123, 127, 234, 0) 61.28%,
+    #1bb2de 99.52%
+  );
+}
+
+.content-box{box-shadow:
+  10px  5px 0 rgba(0, 0, 0, 0.05),
+  0 5px 10px rgba(0, 0, 0, 0.142);
+}
+
+@media screen and (max-width: 600px) {
+   .appbar {
+    bottom: 0;
+    left: 0;
+    right: 0;
+     flex: content;
+    z-index:100;
+ 
+   }
+   .side-z {z-index: 101;}
+
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ 
