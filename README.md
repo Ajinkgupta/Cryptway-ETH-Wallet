@@ -21,7 +21,7 @@
 
 <ol>
 	<li>Click the &quot;Create Wallet&quot; button on the home screen.</li>
-	<li>Enter a password to secure your wallet.</li>
+	 
 	<li>Click the &quot;Create Wallet&quot; button.</li>
 	<li>Your new wallet will be created and its address will be displayed on the screen.</li>
 </ol>
