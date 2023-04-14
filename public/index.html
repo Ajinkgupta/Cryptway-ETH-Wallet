@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
     <link rel="icon" href="%PUBLIC_URL%/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -20,5 +23,18 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
    
+    <script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('https://ethwallet.ajinkgupta.me/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
   </body> 
 </html>
