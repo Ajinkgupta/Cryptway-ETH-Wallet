@@ -1,17 +1,34 @@
 {
   "short_name": "Cryptway",
-  "name": "Cryptway",
-  "description": "Simple & Privacy CRypto Wallet",
-  "manifest_version": 3,
-  "version": "1.0.0",
-  "action": {
-      "default_popup": "index.html",
-      "default_title": "Cryptway"
-  },
-  "permissions": [],
-  "icons": {
-      "16": "logo.png",
-      "48": "logo.png",
-      "128": "logo.png"
-  }
+  "name": "Ethereum Crypto Wallet ",
+  "icons": [
+    {
+      "src": "https://ethwallet.ajinkgupta.me/logo.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "https://ethwallet.ajinkgupta.me/logo.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "https://ethwallet.ajinkgupta.me/logo.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "https://ethwallet.ajinkgupta.me/logo.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "https://ethwallet.ajinkgupta.me/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "display": "standalone",
+  "theme_color": "#2D2F36"
 }
