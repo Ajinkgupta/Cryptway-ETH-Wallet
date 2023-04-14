@@ -1,10 +1,10 @@
 import { ethers } from 'ethers';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState ,useRef } from 'react';
 import { Account } from '../models/Account';
-import { goerli } from '../models/Chain';
+import { sepolia } from '../models/Chain';
 import { Transaction } from '../models/Transaction';
 import { TransactionService } from '../services/TransactionService';
-import { shortenAddress } from '../utils/AccountUtils';
+import { shortenAddress } from '../utils/AccountUtils'; 
 
 type AccountTransactionsProps = {
   account: Account,
@@ -12,7 +12,7 @@ type AccountTransactionsProps = {
 
 
 const AccountTransactions: React.FC<AccountTransactionsProps> = ({ account }) => {
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [transactions, setTransactions] = useState<Transaction[]>([]); 
 
   const [networkResponse, setNetworkResponse] = useState<{ status: null | 'pending' | 'complete' | 'error', message: string | React.ReactElement }>({
     status: null,
@@ -47,6 +47,7 @@ const AccountTransactions: React.FC<AccountTransactionsProps> = ({ account }) =>
 useEffect(() => {
   getTransactions(10);
 }, [getTransactions]);
+ 
 
   return (
     <div className="flex-1 flex justify-start   items-center flex-col   p-5 z-40 ">
@@ -54,6 +55,8 @@ useEffect(() => {
     <div className="bg-[#2D2F36] mt-20   w-max-full     sm:w-[30rem]   md:w-[32rem] rounded-3xl p-4 content-box">
            
     <div className="AccountTransactions">
+     
+
   <h2 className="text-2xl font-bold mb-4">Transactions</h2>
   <div className="TransactionsMetaData text-sm mb-4">
     {networkResponse.status === "complete" && transactions.length === 0 && (
@@ -88,7 +91,7 @@ useEffect(() => {
           <tr key={transaction.hash} className="border-b border-gray-200">
             <td className="px-4 py-2">
               <a
-                href={`${goerli.blockExplorerUrl}/tx/${transaction.hash}`}
+                href={`${sepolia.blockExplorerUrl}/tx/${transaction.hash}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-purple-600 hover:underline"
@@ -98,7 +101,7 @@ useEffect(() => {
             </td>
             <td className="px-4 py-2">
               <a
-                href={`${goerli.blockExplorerUrl}/address/${transaction.from_address}`}
+                href={`${sepolia.blockExplorerUrl}/address/${transaction.from_address}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-purple-600 hover:underline"
@@ -113,7 +116,7 @@ useEffect(() => {
             </td>
             <td className="px-4 py-2">
               <a
-                href={`${goerli.blockExplorerUrl}/address/${transaction.to_address}`}
+                href={`${sepolia.blockExplorerUrl}/address/${transaction.to_address}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-purple-600 hover:underline"

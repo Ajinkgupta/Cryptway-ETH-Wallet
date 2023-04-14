@@ -91,6 +91,9 @@ return (
             <div>
             <Link to="/send"><button type="button" className=" p-2 rounded  hover:shadow hover:bg-[#41444F]"><img src={send}  className="w-10 h-10 object-contain" /></button></Link>
             </div>
+            <div>
+            <Link to="/show-qr"><button type="button" className=" p-2 rounded  hover:shadow hover:bg-[#41444F]"><img src={currencies}  className="w-10 h-10 object-contain" /></button></Link>
+            </div>
 
             <div>
             <Link to="/swap"><button type="button" className=" p-2 rounded  hover:shadow hover:bg-[#41444F]"><img src={swap}  className="w-10 h-10 object-contain" /></button></Link>
@@ -100,9 +103,7 @@ return (
             <Link to="/history"><button type="button" className=" p-2 rounded  hover:shadow hover:bg-[#41444F]"><img src={fund}  className="w-10 h-10 object-contain" /></button></Link>
             </div>
 
-            <div>
-            <Link to="/currencies"><button type="button" className=" p-2 rounded  hover:shadow hover:bg-[#41444F]"><img src={currencies}  className="w-10 h-10 object-contain" /></button></Link>
-            </div>
+            
             </div>
           </div> 
 
@@ -110,7 +111,7 @@ return (
 
 
 
-          <a   href="https://github.com/orgs/cryptway/discussions" >  <button  type="button" className=" fixed gap-2 bg-purple-600  bottom-2 right-5 flex px-6 py-[6px] border-[1px] border-[#41444F] hover:px-[23px] hover:py-[5px] shadow-lg  flex-row justify-center items-center my-5  rounded-l-3xl rounded-r-3xl  cursor-pointer">                   <p className="font-poppins font-bold text text-white text-sm "> Request Feature  </p> </button> </a> 
+          <a   href="#" >  <button  type="button" className=" fixed gap-2 bg-orange-500  bottom-2 right-5 flex px-6 py-[6px] border-[1px] border-[#41444F] hover:px-[23px] hover:py-[5px] shadow-lg  flex-row justify-center items-center my-5  rounded-l-3xl rounded-r-3xl  cursor-pointer">                   <p className="font-poppins font-bold text text-white text-sm "> Request Feature  </p> </button> </a> 
   
   
           <div  className={`fixed side-z shadow-lg  bottom-20 right-0 bg-[#2D2F36]  rounded-l-xl p-3 grid sm:grid-cols-1   gap-4    ease-in-out duration-300 ${ showSidebar ? "translate-x-2 " : "translate-x-full"}`}>  <Sidebar/>  </div>

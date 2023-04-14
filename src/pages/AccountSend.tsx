@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { sendToken } from '../utils/TransactionUtils';
-import { goerli } from '../models/Chain';
+import { sepolia } from '../models/Chain';
 import { Account } from '../models/Account';
 import AccountTransactions from './AccountTransactions';
 import { ethers } from 'ethers';
@@ -23,7 +23,7 @@ const AccountSend: React.FC<AccountSendProps> = ({account}) => {
 
   useEffect(() => {
     const fetchData = async () => {
-        const provider = new ethers.providers.JsonRpcProvider(goerli.rpcUrl);
+        const provider = new ethers.providers.JsonRpcProvider(sepolia.rpcUrl);
         let accountBalance = await provider.getBalance(account.address);
         setBalance((String(toFixedIfNecessary(ethers.utils.formatEther(accountBalance)))));
     }
@@ -52,7 +52,7 @@ const AccountSend: React.FC<AccountSendProps> = ({account}) => {
         // Set the network response status to "complete" and the message to the transaction hash
         setNetworkResponse({
           status: 'complete',
-          message: <p>Transfer complete! <a href={`${goerli.blockExplorerUrl}/tx/${receipt.transactionHash}`} target="_blank" rel="noreferrer">
+          message: <p>Transfer complete! <a href={`${sepolia.blockExplorerUrl}/tx/${receipt.transactionHash}`} target="_blank" rel="noreferrer">
             View transaction
             </a></p>,
         });
@@ -139,12 +139,21 @@ const AccountSend: React.FC<AccountSendProps> = ({account}) => {
             Send {amount} ETH
         </button>
 
+        
+ 
+
         {networkResponse.status &&
             <>
-            {networkResponse.status === 'pending' && <p>Transfer is pending...</p>}
+             <div
+            className="bg-orange-600 my-2  w-full rounded-3xl py-2 px-8 text-xl font-semibold flex items-center justify-center cursor-pointer border border-black hover:border-[#234169]"  
+          >
+             {networkResponse.status === 'pending' && <p>Transfer is pending...</p>}
             {networkResponse.status === 'complete' && <p>{networkResponse.message}</p>}
             {networkResponse.status === 'error' && <p>Error occurred while transferring tokens: {networkResponse.message}</p>}
-            </>
+           
+        </div>
+
+             </>
         }
  
        </div>

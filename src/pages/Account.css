@@ -1,3 +1,27 @@
 .AccountTransactions {
     overflow-x: auto;
 }
+
+/* Custom CSS class for fading in and out */
+.fade {
+    
+    transform: translateX(-50%);
+    animation-name: slide-in-fade-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide-in-fade-out {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0%);
+    }
+  }

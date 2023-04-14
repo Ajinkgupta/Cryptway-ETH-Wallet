@@ -3,12 +3,13 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import APP from './pages/App';
+import Scanner from './layout/scan'
 import AccountSend from './pages/AccountSend';
 import Navbar from './layout/nav'
 import { Account } from './models/Account'; 
 import AccountTransactions from './pages/AccountTransactions';
-
-import { generateAccount } from './utils/AccountUtils';
+import Recieve from './pages/recieve'
+import { generateAccount } from './utils/AccountUtils'; 
 function App() {
   const recoveryPhraseKeyName = 'recoveryPhrase';
   const [seedphrase, setSeedphrase] = useState('');
@@ -66,9 +67,12 @@ useEffect(() => {
       <Route path="/" element={<APP/>} />
       <Route path="/send" element={account ? <AccountSend account={account} /> : null} />
       <Route path="/history" element={account ? <AccountTransactions account={account} /> : null} />
+      <Route path="/scan" element={ <Scanner /> } />
 
       <Route path="/swap" element={<Swap />} />
-        <Route path="/currencies" element={<Currencies />} />
+
+      <Route path="/show-qr" element={<Recieve />} />
+       
     </Routes>
     
     </div>
@@ -79,10 +83,6 @@ useEffect(() => {
 function Swap() {
   window.location.replace("https://swap.cryptway.in/");
   return null;
-}
-function Currencies() {
-  window.location.replace("https://cryptwaycurrencies.netlify.app/");
-  return null;
-}
+} 
 
 export default App;

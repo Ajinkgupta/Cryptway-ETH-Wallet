@@ -1,5 +1,5 @@
 import { ethers, Wallet } from 'ethers';
-import { CHAINS_CONFIG, goerli } from '../models/Chain';
+import { CHAINS_CONFIG, sepolia } from '../models/Chain';
 
 export async function sendToken(
   amount: number,
@@ -8,9 +8,9 @@ export async function sendToken(
   privateKey: string,
 ) {
 
-  const chain = CHAINS_CONFIG[goerli.chainId];
+  const chain = CHAINS_CONFIG[sepolia.chainId];
 
-  // Create a provider using the Infura RPC URL for Goerli
+  // Create a provider using the Infura RPC URL for sepolia
   const provider = new ethers.providers.JsonRpcProvider(chain.rpcUrl);
 
   // Create a wallet instance from the sender's private key

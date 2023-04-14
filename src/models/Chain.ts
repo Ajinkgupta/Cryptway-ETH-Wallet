@@ -5,21 +5,21 @@ export type Chain = {
     rpcUrl: string;
   };
   
-export const goerli: Chain = {
-    chainId: '5',
-    name: 'Goerli',
-    blockExplorerUrl: 'https://goerli.etherscan.io',
-    rpcUrl: 'https://goerli.infura.io/v3/59b59e23bb7c44d799b5db4a1b83e4ee',
+export const sepolia: Chain = {
+    chainId: '11155111',
+    name: 'sepolia',
+    blockExplorerUrl: 'https://sepolia.etherscan.io',
+    rpcUrl: 'https://sepolia.infura.io/v3/b63c0b03df1e46a08d801f0f48f09e91',
 };
 
 export const mainnet: Chain = {
     chainId: '1',
     name: 'Ethereum',
     blockExplorerUrl: 'https://etherscan.io',
-    rpcUrl: 'https://mainnet.infura.io/v3/59b59e23bb7c44d799b5db4a1b83e4ee',
+    rpcUrl: 'https://mainnet.infura.io/v3/b63c0b03df1e46a08d801f0f48f09e91',
 };
 
 export const CHAINS_CONFIG = {
-    [goerli.chainId]: goerli,
+    [sepolia.chainId]: sepolia,
     [mainnet.chainId]: mainnet,
 };
