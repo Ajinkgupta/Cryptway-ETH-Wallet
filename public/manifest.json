@@ -1,6 +1,8 @@
 {
   "short_name": "Cryptway",
   "name": "Ethereum Crypto Wallet ",
+  "theme_color": "#2D2F36",
+   "background_color": "#2D2F36",
   "icons": [
     {
       "src": "https://ethwallet.ajinkgupta.me/logo.png",
