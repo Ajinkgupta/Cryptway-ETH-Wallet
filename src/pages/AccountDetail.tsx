@@ -7,8 +7,7 @@ import { ethers } from 'ethers';
 import { toFixedIfNecessary } from '../utils/AccountUtils';
 import './Account.css';
 
-import { Link } from "react-router-dom";
-import avtar from '../assets/avtar.png'
+import { Link } from "react-router-dom"; 
 interface AccountDetailProps {
   account: Account
 }
@@ -96,7 +95,10 @@ const balanceInRupees = balance ? parseFloat(balance) * exchangeRate : null;
   return (
     <>
     <div className="flex pt-[150px] justify-center items-center flex-col w-full min-h-full">
-           <img src={avtar} className="w-24 h-24 rounded-full" /> <br/>
+            <img
+          src={`https://api.multiavatar.com/${account.address}.png`}
+          className="w-24 h-24 rounded-full"
+        /> <br/>
            <h1 className="text-white font-poppins font-black text-3xl tracking-wide"> Account </h1>
   
            <p className='font-bold text-gray-500 text-lg'> ₹ {balanceInRupees} | {balance} ETH </p>
