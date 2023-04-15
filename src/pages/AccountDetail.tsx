@@ -96,7 +96,7 @@ const balanceInRupees = balance ? parseFloat(balance) * exchangeRate : null;
     <>
     <div className="flex pt-[150px] justify-center items-center flex-col w-full min-h-full">
             <img
-          src={`https://api.multiavatar.com/${account.address}.png`}
+          src={`https://api.multiavatar.com/${account.address}.png?apikey=s9P2DAhUGyKbJO`}
           className="w-24 h-24 rounded-full"
         /> <br/>
            <h1 className="text-white font-poppins font-black text-3xl tracking-wide"> Account </h1>
