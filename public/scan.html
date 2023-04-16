@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scan EthWallet</title>
+  </head>
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js"
+      integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+    body {
+  background-color: #202124;
+}
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .main { width: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #2D2F36;}
+     #reader {border-radius: 20px;
+     }
+
+      #result {
+      border-radius: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .floating-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 999;
+}
+
+    </style>
+    <main>
+    <div class="main">
+      <div id="reader"></div>
+      <div id="result"></div>
+      </div>
+      
+      <a href="./"class="floating-btn">Back To App</a>
+    </main>
+    <script>
+      const scanner = new Html5QrcodeScanner('reader', {
+        qrbox: {
+          width: 250,
+          height: 250,
+        },
+        fps: 20,
+      });
+      scanner.render(success, error);
+      function success(result) {
+        document.getElementById('result').innerHTML = `
+<h2>Address Found!</h2>
+
+<p><a href="./send?address=${result}">${result}</a></p>
+`;
+        scanner.clear();
+        document.getElementById('reader').remove();
+      }
+      function error(err) {
+        console.error(err);
+      }
+    </script>
+  </body>
+</html>
