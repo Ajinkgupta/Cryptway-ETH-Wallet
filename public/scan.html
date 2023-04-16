@@ -40,6 +40,16 @@
         text-align: center;
         font-size: 1.5rem;
       }
+      .f-btn {
+          margin:10px
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 999;
+      }
       .floating-btn {
   position: fixed;
   bottom: 20px;
@@ -65,7 +75,7 @@
       <div id="result"></div>
       </div>
       
-      <a href="./"class="floating-btn">Back To App</a>
+      <a href="./" class="floating-btn">Back To App</a>
     </main>
     <script>
       const scanner = new Html5QrcodeScanner('reader', {
@@ -80,7 +90,7 @@
         document.getElementById('result').innerHTML = `
 <h2>Address Found!</h2>
 
-<p><a href="./send?address=${result}">${result}</a></p>
+<p><a href="./send?address=${result}" class="f-btn">Go to App</a></p>
 `;
         scanner.clear();
         document.getElementById('reader').remove();
