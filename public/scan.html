@@ -24,15 +24,19 @@
         align-items: center;
       }
       
-      .main { width: 300px;
+      .main { 
+      margin-top:100px;
+      width: 300px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     background-color: #2D2F36;}
-     #reader {border-radius: 20px;
+     #reader {border-radius: 0px 0px 20px 20px;
+        
+       border-width : 0;
      }
 
-      #result {
-      border-radius: 20px;
+      #result { 
+     
         text-align: center;
         font-size: 1.5rem;
       }
@@ -53,7 +57,11 @@
     </style>
     <main>
     <div class="main">
-      <div id="reader"></div>
+        <p style="padding-top:10x;padding-bottom:10px;margin:2px;"><center> Align Qr Code in Box</center></p>
+      <div id="reader" style="border-width : 0">
+    
+      
+      </div>
       <div id="result"></div>
       </div>
       
