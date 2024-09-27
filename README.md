@@ -12,6 +12,10 @@ ETH Wallet is a blockchain-based wallet application designed for Ethereum (ETH).
 
 ![image](https://github.com/Ajinkgupta/ETH-Wallet/assets/76146259/f5de2bfa-d5f4-4180-81cc-fad30fa3ae47)
 
+
+![Cryptway Demo](https://github.com/Ajinkgupta/Cryptway-ETH-Wallet/blob/main/recorded.gif?raw=true)
+
+
 ## Features
 
 - **Wallet Creation:** Easily create a new Ethereum wallet with a few simple steps.
