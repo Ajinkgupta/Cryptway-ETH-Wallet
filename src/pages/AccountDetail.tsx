@@ -96,7 +96,7 @@ const balanceInRupees = balance ? parseFloat(balance) * exchangeRate : null;
   return (
     <>
     <div className="flex pt-[150px] justify-center items-center flex-col w-full min-h-full">
-    <Avatar 
+               <Avatar 
           name={account.address}
           variant="beam"
           className="w-24 h-24 rounded-full"
@@ -109,7 +109,7 @@ const balanceInRupees = balance ? parseFloat(balance) * exchangeRate : null;
 
     
    <h4 className='text-white flex justify-center items-center'>
-       <div className='flex   w-[200px]  z-50   gap-2 px-4 py-[6px] hover:border-[1px] hover:px-[15px] hover:py-[5px] shadow-lg  flex-row justify-center items-center my-5 bg-[#2D2F36]  rounded-l-3xl rounded-r-3xl  cursor-pointer'>   <a href={`https://sepolia.etherscan.io/address/${account.address}`} target="_blank" rel="noreferrer">
+       <div className='flex   w-[200px]     gap-2 px-4 py-[6px] hover:border-[1px] hover:px-[15px] hover:py-[5px] shadow-lg  flex-row justify-center items-center my-5 bg-[#2D2F36]  rounded-l-3xl rounded-r-3xl  cursor-pointer'>   <a href={`https://sepolia.etherscan.io/address/${account.address}`} target="_blank" rel="noreferrer">
            {account?.address.slice(0, 8) + '...' + account?.address.slice(-4)} 
             </a>
             <button onClick={copyToClipboard} className='ml-2'>     <svg xmlns="http://www.w3.org/2000/svg" className='w-6 h-6 text-purple-500' viewBox="0 0 512 512"><path d="M448 384H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64H396.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V320c0 35.3-28.7 64-64 64zM64 128h96v48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H256c8.8 0 16-7.2 16-16V416h48v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64z"/></svg>
