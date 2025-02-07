@@ -6,6 +6,7 @@ import AccountTransactions from './AccountTransactions';
 import { ethers } from 'ethers';
 import { toFixedIfNecessary } from '../utils/AccountUtils';
 import './Account.css';
+import Avatar from "boring-avatars";
 
 import { Link } from "react-router-dom"; 
 interface AccountDetailProps {
@@ -95,10 +96,13 @@ const balanceInRupees = balance ? parseFloat(balance) * exchangeRate : null;
   return (
     <>
     <div className="flex pt-[150px] justify-center items-center flex-col w-full min-h-full">
-            <img
-          src={`https://api.multiavatar.com/${account.address}.png?apikey=s9P2DAhUGyKbJO`}
+    <Avatar 
+          name={account.address}
+          variant="beam"
           className="w-24 h-24 rounded-full"
-        /> <br/>
+        />
+            
+             <br/>
            <h1 className="text-white font-poppins font-black text-3xl tracking-wide"> Account </h1>
   
            <p className='font-bold text-gray-500 text-lg'> ₹ {balanceInRupees} | {balance} ETH </p>
